@@ -1,0 +1,21 @@
+# Python / Backend
+.venv/
+__pycache__/
+*.pyc
+.env
+.pytest_cache/
+alembic.ini
+
+# Node / Frontend
+node_modules/
+dist/
+.env.local
+.env.*.local
+npm-debug.log*
+
+# Mac OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
