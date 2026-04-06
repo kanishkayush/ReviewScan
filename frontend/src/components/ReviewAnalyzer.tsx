@@ -10,7 +10,8 @@ export const ReviewAnalyzer = () => {
 
   const { mutate, data, isPending, isError } = useMutation({
     mutationFn: async (reviewText: string) => {
-      const res = await axios.post('http://localhost:8000/predict', { text: reviewText });
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+      const res = await axios.post(`${apiUrl}/predict`, { text: reviewText });
       return res.data;
     }
   });
